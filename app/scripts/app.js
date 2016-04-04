@@ -6,10 +6,23 @@
                 requireBase: false
             });
         $stateProvider
-            .state('home', {
-            url: '/',
-            templateUrl: 'templates/home.html'
-        });
+            .state('index', {
+                url: '',
+                views: {
+                    "sidebar": { template: "index.sidebar" },
+                    "page": { template: "index.page" }
+                    }
+            })
+            .state('sidebar', {
+                url: 'sidebar',
+                controller: 'SidebarCtrl as sidebar',
+                templateUrl: 'templates/sidebar.html'
+            })
+            .state('page', {
+                url: 'page',
+                controller: 'PageCtrl as page',
+                templateUrl: 'templates/page.html'
+            });
     }
 
     angular

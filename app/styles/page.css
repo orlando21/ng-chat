@@ -1,0 +1,42 @@
+#page-content-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    margin-left: 15px;
+}
+
+.room-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.chat-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.chat-container li:nth-child(odd) {
+    background-color: #ededed;
+}
+
+.message-container {
+    padding: 10px;
+}
+
+#usermsg {
+    position:fixed;
+    bottom:0;
+    border:1px solid #ACD8F0;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:1058px;
+}
+
+#submitmsg{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height:37px;
+}
