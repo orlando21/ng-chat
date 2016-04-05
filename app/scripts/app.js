@@ -6,26 +6,14 @@
                 requireBase: false
             });
         $stateProvider
-            .state('index', {
-                url: '',
-                views: {
-                    "sidebar": { template: "index.sidebar" },
-                    "page": { template: "index.page" }
-                    }
-            })
-            .state('sidebar', {
-                url: 'sidebar',
-                controller: 'SidebarCtrl as sidebar',
-                templateUrl: 'templates/sidebar.html'
-            })
-            .state('page', {
-                url: 'page',
-                controller: 'PageCtrl as page',
-                templateUrl: 'templates/page.html'
+            .state('home', {
+                url: '/',
+                controller: 'RoomListCtrl',
+                templateUrl: '/templates/home.html'
             });
     }
 
     angular
-        .module("blocChat", ["firebase", "ui.router"])
+        .module('blocChat', ['firebase', 'ui.router'])
         .config(config);
 })();
