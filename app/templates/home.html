@@ -2,17 +2,18 @@
 
     <!-- sidebar -->
     <div id="sidebar-wrapper" ng-controller="RoomListCtrl">
-
-        <h2 class="sidebar-title">Bloc Chat
-            <span class="btn-group">
-                <button class="btn btn-mini">New Room</button>
-            </span>
-        </h2>
-        <ul class="sidebar-nav">
-            <li ng-repeat="room in rooms">
-                <a href="#">{{room.name}}</a>
-            </li>
-        </ul>
+            <h2 class="sidebar-title">Bloc Chat
+                <span class="btn-group">
+                    <button class="btn btn-mini" ng-click="openCreateModal()">New room</button>
+                </span>
+            </h2>
+        <div ng-controller="RoomListCtrl">
+            <ul class="sidebar-nav">
+                <li ng-repeat="room in rooms">
+                    <a href="#">{{room.name}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <!-- /#sidebar -->
 

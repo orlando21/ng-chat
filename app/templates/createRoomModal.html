@@ -1,0 +1,20 @@
+<div class="modal-wrapper" ng-controller="CreateRoomCtrl">
+
+    <div class="modal-header">
+        <h4 class="modal-title">Create new room</h4>
+    </div>
+
+    <div class="modal-body">
+        <form ng-submit="createRoom(newroom)" class="form-inline">
+            <input class="form-control" type="text" ng-model="newroom.name" value="Enter room name">
+        </form>
+     </div>
+
+    <div class="modal-footer">
+        <span class="btn-group">
+            <button class="btn btn-primary" ng-click="createRoom()">Cancel</button>
+            <button class="btn btn-warning" ng-click="cancelRoom()">Create</button>
+        </span>
+    </div>
+
+</div>
