@@ -131,6 +131,40 @@ h2 .btn-group {
     text-decoration: none;
 }
 
+/* Begin modal styles */
+
+.modal-wrapper {
+}
+
+.modal-header{
+}
+
+.modal-title{
+}
+
+.modal-body{
+}
+
+.form-inline {
+    display: flex;
+}
+
+.form-control {
+    flex-grow: 1;
+}
+
+.modal-footer{
+}
+
+.modal-footer .btn-group {
+    display: inline-block;
+}
+.modal-button{
+}
+
+/* End media */
+
+
 /* Begin media */
 
 @media(min-width:768px) {
