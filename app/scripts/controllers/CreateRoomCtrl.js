@@ -1,27 +1,27 @@
 (function() {
-    function CreateRoomCtrl($scope, Room, $modalInstance) {
+    function CreateRoomCtrl($scope, Room, $modalInstance, $window) {
 
-        var closeModalInstance = function(modalInstance) {
-            modalInstance.close('exit');
+        var closeModalInstance = function() {
+            $modalInstance.close('exit');
         };
 
-        $scope.createRoom = function(roomName) {
+        $scope.create = function(roomName) {
             if(roomName) {
                 // creates new room and closes modal
                 Room.create(roomName);
-                closeModalInstance($modalInstance);
+                closeModalInstance();
             }
             else {
-                $scope.errorMessage = 'Invalid room name.';
+                $window.alert("Invalid input! You must write 'Room n' where 'n' is a number.");
             }
         };
 
         $scope.cancel = function() {
-            $modalInstance.dismiss('cancel');
+            closeModalInstance();
         };
     }
 
     angular
         .module('blocChat')
-        .controller('CreateRoomCtrl', ['$scope', 'Room', '$modalInstance', CreateRoomCtrl]);
+        .controller('CreateRoomCtrl', ['$scope', 'Room', '$modalInstance', '$window', CreateRoomCtrl]);
 })();
