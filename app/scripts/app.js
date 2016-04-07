@@ -7,12 +7,13 @@
             });
         $stateProvider
             .state('home', {
-            url: '/',
-            templateUrl: 'templates/home.html'
-        });
+                url: '/',
+                controller: 'RoomListCtrl',
+                templateUrl: '/templates/home.html'
+            });
     }
 
     angular
-        .module("blocChat", ["firebase", "ui.router"])
+        .module('blocChat', ['firebase', 'ui.router'])
         .config(config);
 })();

@@ -2,68 +2,14 @@
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Greg's Bloc Chat Project</title>
+    <title>Bloc Chat Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/sidebar.css">
 </head>
 <body>
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-
-            <h2 class="sidebar-title">Bloc Chat
-                <span class="btn-group">
-                    <button class="btn btn-mini">New Room</button>
-                </span>
-            </h2>
-            <ul class="sidebar-nav">
-                <li>
-                    <a href="#">Room 1</a>
-                </li>
-                <li>
-                    <a href="#">Room 2</a>
-                </li>
-                <li>
-                    <a href="#">Room 3</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content: keep all content within this wrapper! -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-
-                <div class="room-title">Room 1</div>
-
-                <ul class="chat-container">
-                    <li class="message-container">
-                        <div class="user-name">John Doe</div>
-                        <div class="user-message">Hey how's it going?</div>
-                    </li>
-                    <li class="message-container">
-                        <div class="user-name">Betty Boop</div>
-                        <div class="user-message">Not bad. You?</div>
-                    </li>
-                    <li class="message-container">
-                        <div class="user-name">Me Three</div>
-                        <div class="user-message">Cool chat room.</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
-        <form name="message-input" id="message-form" action="">
-            <input name="usermsg" type="text" id="usermsg" value="Write your message here..." size="63" onfocus="if (this.value=='Write your message here...') this.value='';" />
-            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
-        </form>
-    </div>
+    <ui-view></ui-view>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <!-- Firebase -->
@@ -72,6 +18,12 @@
     <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
     <!-- AngularUIRouter -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <!-- Angular module -->
     <script src="/scripts/app.js"></script>
+    <!-- Room list controller -->
+    <script src="/scripts/controllers/RoomListCtrl.js"></script>
+    <!-- Room service (lol) -->
+    <script src="/scripts/services/Room.js"></script>
+
 </body>
 </html>

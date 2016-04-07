@@ -1,1 +1,49 @@
-<h1>Home Page</h1>
+<section id="wrapper">
+
+    <!-- sidebar -->
+    <div id="sidebar-wrapper" ng-controller="RoomListCtrl">
+
+        <h2 class="sidebar-title">Bloc Chat
+            <span class="btn-group">
+                <button class="btn btn-mini">New Room</button>
+            </span>
+        </h2>
+        <ul class="sidebar-nav">
+            <li ng-repeat="room in rooms">
+                <a href="#">{{room.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar -->
+
+    <!-- page content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+
+            <div class="room-title">Room 1</div>
+
+            <ul class="chat-container">
+                <li class="message-container">
+                    <div class="user-name">John Doe</div>
+                    <div class="user-message">Hey how's it going?</div>
+                </li>
+                <li class="message-container">
+                    <div class="user-name">Betty Boop</div>
+                    <div class="user-message">Not bad. You?</div>
+                </li>
+                <li class="message-container">
+                    <div class="user-name">Me Three</div>
+                    <div class="user-message">Cool chat room.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /#page content -->
+
+    <!-- message bar -->
+    <form name="message-input" id="message-form" action="">
+        <input name="usermsg" type="text" id="usermsg" value="Write your message here..." size="63" onfocus="if (this.value=='Write your message here...') this.value='';" />
+        <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+    </form>
+
+</section>
