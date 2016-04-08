@@ -12,7 +12,7 @@
                 closeModalInstance();
             }
             else {
-                $window.alert("Invalid input! You must write 'Room n' where 'n' is a number.");
+                $window.alert("Invalid input! You must write a valid string.");
             }
         };
 
