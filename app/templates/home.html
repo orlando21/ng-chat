@@ -7,10 +7,10 @@
                     <button class="btn btn-mini" ng-click="openRoomModal()">New room</button>
                 </span>
             </h2>
-        <div ng-controller="RoomListCtrl">
+        <div>
             <ul class="sidebar-nav">
                 <li ng-repeat="room in rooms">
-                    <a href="#">{{room.name}}</a>
+                    <span ng-click="setRoom(room)">{{room.name}}</span>
                 </li>
             </ul>
         </div>
@@ -18,7 +18,7 @@
     <!-- /#sidebar -->
 
     <!-- page content -->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" ng-controller="RoomListCtrl">
         <div class="container-fluid">
 
             <div class="room-title">Room 1</div>
