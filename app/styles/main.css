@@ -120,14 +120,16 @@ h2 .btn-group {
     color: #4d4d4d;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li span:hover {
     text-decoration: none;
     color: #4d4d4d;
     font-weight: bold;
+    cursor: pointer;
+    cursor: hand;
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li span:active,
+.sidebar-nav li span:focus {
     text-decoration: none;
 }
 
