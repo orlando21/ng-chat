@@ -1,7 +1,8 @@
 (function() {
-    function Room($firebaseArray, Message) {
-        var firebaseRef = new Firebase("https://blinding-fire-789.firebaseio.com");
-        var rooms = $firebaseArray(firebaseRef.child("rooms"));
+    function Room($firebaseArray) {
+        var firebaseRef = new Firebase('https://blinding-fire-789.firebaseio.com');
+        var rooms = $firebaseArray(firebaseRef.child('rooms'));
+
 
         return {
             all: rooms,
@@ -10,14 +11,16 @@
                     name: roomName
                 });
             },
-            getMessages: function(roomID) {
-                return Message.getMessages(roomID);
+            getRoom: function(roomID){
+                return rooms.$getRecord(roomID);
+            },
+            getMessages: function(roomID){
+                return $firebaseArray(firebaseRef.child('messages').orderByChild('roomID').equalTo(roomID));
             }
-
         };
     }
 
         angular
         .module('blocChat')
-        .factory('Room', ['$firebaseArray', 'Message', Room]);
+        .factory('Room', ['$firebaseArray', Room]);
 })();
