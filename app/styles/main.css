@@ -51,6 +51,10 @@ height:99%;
     padding: 10px;
 }
 
+.message-container .user-name {
+    font-weight: bold;
+}
+
 #usermsg {
     position:fixed;
     bottom:0;
@@ -133,6 +137,8 @@ h2 .btn-group {
     text-decoration: none;
 }
 
+/* End sidebar */
+
 /* Begin modal styles */
 
 .modal-wrapper {
@@ -164,10 +170,10 @@ h2 .btn-group {
 .modal-button{
 }
 
-/* End media */
+/* End modal */
 
 
-/* Begin media */
+/* Begin media styles */
 
 @media(min-width:768px) {
     #wrapper {
