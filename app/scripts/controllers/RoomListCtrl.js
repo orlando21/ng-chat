@@ -1,7 +1,13 @@
+/**
+* @function RoomList controller
+* @desc This is the main controller for bloc chat app
+* @param $rootScope, Room, $modal
+*/
 (function() {
     function RoomListCtrl($rootScope, Room, $modal) {
         $rootScope.rooms=Room.all;
 
+        // wait for asynchronous data interchange
         $rootScope.rooms.$loaded().then(function(rooms, newRoomID) {
 
             // initialize by setting activeRoom to first chat room
@@ -16,7 +22,7 @@
 
         });
 
-        // opens the 'create_room_modal' modal
+        // opens a create room modal
         $rootScope.openRoomModal = function() {
             var modalInstance = $modal.open({
             templateUrl: 'templates/createRoomModal.html',
