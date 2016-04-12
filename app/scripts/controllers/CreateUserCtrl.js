@@ -9,7 +9,7 @@
 
             if(userName && userName !== '') {
                 // creates new room and closes modal
-                $cookies.put('blocChatCurrentUser',userName);
+                $cookies.put('blocChatCurrentUser', userName);
                 closeModalInstance();
             }
             else {

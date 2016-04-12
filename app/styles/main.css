@@ -73,6 +73,7 @@ height:99%;
 }
 
 /* End page styles */
+
 /* Begin sidebar styles */
 
 #sidebar-wrapper {
@@ -139,6 +140,14 @@ h2 .btn-group {
 
 /* End sidebar */
 
+/* Begin footer */
+
+.footer {
+
+}
+
+/* End footer */
+
 /* Begin modal styles */
 
 .modal-wrapper {
@@ -155,6 +164,10 @@ h2 .btn-group {
 
 .form-inline {
     display: flex;
+}
+
+.form-inline .form-group{
+    clear: both;
 }
 
 .form-control {

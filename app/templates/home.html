@@ -29,15 +29,14 @@
                     <div class="user-message">{{message.content}}</div>
                 </li>
             </ul>
-
         </div>
     </div>
     <!-- /#page content -->
 
-    <!-- message bar -->
-    <form name="message-input" id="message-form" action="">
-        <input name="usermsg" type="text" id="usermsg" value="Write your message here..." size="63" onfocus="if (this.value=='Write your message here...') this.value='';" />
-        <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+    <!-- footer: message bar -->
+    <form name="message-input" id="message-form" action="" ng-submit="sendMessage(newMessage)">
+        <input name="usermsg" type="text" id="usermsg" ng-model= "newMessage.text" size="63" required autofocus />
     </form>
+    <button type="submit" id="submitmsg" ng-click="sendMessage(newMessage)">Send</button>
 
 </section>

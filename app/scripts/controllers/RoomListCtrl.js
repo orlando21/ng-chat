@@ -4,7 +4,7 @@
 * @param $rootScope, Room, $modal
 */
 (function() {
-    function RoomListCtrl($rootScope, Room, $modal) {
+    function RoomListCtrl($rootScope, Room, Message, $modal) {
         $rootScope.rooms=Room.all;
 
         // wait for asynchronous data interchange
@@ -18,6 +18,12 @@
             $rootScope.setRoom = function(newRoomID) {
                 $rootScope.activeRoom = Room.getRoom(newRoomID);
                 $rootScope.roomMessages = Room.getMessages(newRoomID);
+            };
+            // sendMessage() when user clicks "Send"
+            $rootScope.sendMessage = function(newMessage) {
+                $rootScope.newMessage = {};
+                console.log(newMessage.text);
+                Message.send(newMessage.text, $rootScope.activeRoom);
             };
 
         });
@@ -36,5 +42,5 @@
 
     angular
         .module('blocChat')
-        .controller('RoomListCtrl', ['$rootScope', 'Room', '$modal', RoomListCtrl]);
+        .controller('RoomListCtrl', ['$rootScope', 'Room', 'Message', '$modal', RoomListCtrl]);
 })();
