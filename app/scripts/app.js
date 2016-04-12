@@ -27,12 +27,11 @@
 
             // display username modal
             $modal.openUserModal();
-
         }
     }
 
     angular
-        .module('blocChat', ['firebase', 'ui.bootstrap', 'ui.router', 'ngCookies'])
+        .module('blocChat', ['firebase', 'ui.bootstrap', 'ui.router', 'ngCookies', 'ngMessages'])
         .config(config)
         .run(['$modal', '$cookies', BlocChatCookies]);
 })();
