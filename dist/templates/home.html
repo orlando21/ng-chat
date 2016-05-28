@@ -1,0 +1,42 @@
+<section id="wrapper">
+
+    <!-- sidebar -->
+    <div id="sidebar-wrapper">
+            <h2 class="sidebar-title">Bloc Chat
+                <span class="btn-group">
+                    <button class="btn btn-mini" ng-click="openRoomModal()">New room</button>
+                </span>
+            </h2>
+        <div>
+            <ul class="sidebar-nav">
+                <li ng-repeat="room in rooms">
+                    <span ng-click="setRoom(room.$id)"># {{room.name}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /#sidebar -->
+
+    <!-- page content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+
+            <div class="room-title"># {{activeRoom.name}}</div>
+
+            <ul class="chat-container">
+                <li class="message-container" ng-repeat="message in roomMessages">
+                    <div class="user-name">{{message.username}}</div>
+                    <div class="user-message">{{message.content}}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /#page content -->
+
+    <!-- footer: message bar -->
+    <form name="message-input" id="message-form" action="" ng-submit="sendMessage(newMessage)">
+        <input name="usermsg" type="text" id="usermsg" ng-model= "newMessage.text" size="63" required autofocus />
+    </form>
+    <button type="submit" id="submitmsg" ng-click="sendMessage(newMessage)">Send</button>
+
+</section>
