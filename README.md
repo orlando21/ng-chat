@@ -1,4 +1,4 @@
-# Angular Bloc Chat
+# Bloc Chat
 A single page web application implemented in HTML5, CSS, AngularJS, and using Firebase as a back-end database for storing information about rooms, users, and chats. The app was built as a project as part of Bloc's [Frontend Web Development](https://www.bloc.io/frontend-development-bootcamp) coding bootcamp.
 
 The app allows multiple users to simultaneously chat and manage chat rooms in realtime. For more information and demo see my [portfolio](http://developer.textlogic.ch/portfolio/2-bloc-chat.html).
