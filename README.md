@@ -6,6 +6,6 @@ The app allows multiple users to simultaneously chat and manage chat rooms in re
 ## Starting the app
 Bloc Chat runs with a starter application using the `grunt` build tool and `npm`. The easiest way to run Bloc Chat is to download and install these dependencies. More information can be found in the [starter application](https://github.com/Bloc/bloc-frontend-project-starter) repository.
 
-Using the app is straightfoward`--`just sign in with a user name, select a room, and chat away.
+Using the app is straightfoward&mdash;just sign in with a user name, select a room, and chat away.
 
 ![bloc chat real time angular](http://i.imgur.com/jNLOJ0c.png)
