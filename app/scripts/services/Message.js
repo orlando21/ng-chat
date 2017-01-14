@@ -1,8 +1,13 @@
 (function() {
     function Message($firebaseArray, $cookies) {
-        var firebaseRef = new Firebase('https://blinding-fire-789.firebaseio.com');
-        var messages = $firebaseArray(firebaseRef.child('messages'));
 
+//      Some vestiges from Firebase 2:  
+//      var firebaseRef = new Firebase('https://blinding-fire-789.firebaseio.com');
+//      var messages = $firebaseArray(firebaseRef.child('messages'));
+//      Initialize Firebase
+        
+        var rootRef = firebase.database().ref();
+        var messages = $firebaseArray(rootRef.child('messages'));
 
         return {
             send: function(newMessageText, room){

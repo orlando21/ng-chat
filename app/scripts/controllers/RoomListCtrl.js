@@ -1,6 +1,6 @@
 /**
 * @function RoomList controller
-* @desc This is the main controller for bloc chat app
+* @desc This is the main controller for the Angular chat app
 * @param $rootScope, Room, $modal
 */
 (function() {
@@ -22,8 +22,10 @@
             // sendMessage() when user clicks "Send"
             $rootScope.sendMessage = function(newMessage) {
                 $rootScope.newMessage = {};
-                console.log(newMessage.text);
                 Message.send(newMessage.text, $rootScope.activeRoom);
+                // clear the form of text and refocus after submission
+                document.getElementById("usermsg").value = "";
+                document.getElementById("usermsg").focus();
             };
 
         });

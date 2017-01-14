@@ -1,8 +1,12 @@
 (function() {
     function Room($firebaseArray) {
-        var firebaseRef = new Firebase('https://blinding-fire-789.firebaseio.com');
-        var rooms = $firebaseArray(firebaseRef.child('rooms'));
 
+//      Some vestiges from Firebase 2:        
+//      var firebaseRef = new Firebase('https://blinding-fire-789.firebaseio.com');
+//      var rooms = $firebaseArray(firebaseRef.child('rooms'));
+          
+        var rootRef = firebase.database().ref();
+        var rooms = $firebaseArray(rootRef.child('rooms'));
 
         return {
             all: rooms,
@@ -15,7 +19,7 @@
                 return rooms.$getRecord(roomID);
             },
             getMessages: function(roomID){
-                return $firebaseArray(firebaseRef.child('messages').orderByChild('roomID').equalTo(roomID));
+                return $firebaseArray(rootRef.child('messages').orderByChild('roomID').equalTo(roomID));
             }
         };
     }
